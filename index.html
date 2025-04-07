@@ -667,31 +667,6 @@
                     <h2 class="section-title mb-4 text-start">Contactez-nous</h2>
                     <p class="lead mb-4 text-start">Intéressé à en savoir plus sur Mai Organization ou à collaborer avec nous ? Nous serions ravis d'avoir de vos nouvelles.</p>
                     <div class="contact-info mb-5">
-                        <div class="mb-4">
-                            <h5 class="mb-1"><i class="fas fa-envelope text-primary me-2"></i> <a href="mailto:maiorganization@hotmail.com" class="text-decoration-none">Email</a></h5>
-                            <p class="mb-0">maiorganization@hotmail.com</p>
-                        </div>
-                        <div class="mb-4">
-                            <h5 class="mb-1"><i class="fab fa-github text-primary me-2"></i> <a href="https://github.com/maiorganization" target="_blank" class="text-decoration-none">GitHub</a></h5>
-                            <p class="mb-0">github.com/maiorganization</p>
-                        </div>
-                        <div class="mb-4">
-                            <h5 class="mb-1"><i class="fab fa-discord text-primary me-2"></i> <a href="https://discord.gg/maiorganization" target="_blank" class="text-decoration-none">Discord</a></h5>
-                            <p class="mb-0">discord.gg/maiorganization</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-buttons d-flex gap-3">
-                        <a href="https://github.com/maiorganization" target="_blank" class="btn btn-outline-primary">
-                            <i class="fab fa-github me-2"></i> Suivre sur GitHub
-                        </a>
-                        <a href="https://discord.gg/maiorganization" target="_blank" class="btn btn-outline-primary">
-                            <i class="fab fa-discord me-2"></i> Rejoindre notre Discord
-                        </a>
-                        <a href="mailto:maiorganization@hotmail.com" class="btn btn-primary">
-                            <i class="fas fa-envelope me-2"></i> Nous écrire
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -745,43 +720,26 @@
     
     <!-- Custom JS -->
     <script>
-        // Main JavaScript file for Mai Organization website
 
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize scrollspy
             initScrollSpy();
-            
-            // Smooth scrolling for navigation links
             initSmoothScroll();
-            
-            // Navbar animation on scroll
             initNavbarAnimation();
-            
-            // Add animation to cards when they come into view
             initCardAnimations();
-            
-            // Mobile menu toggle
             initMobileMenuToggle();
-            
-            // Add typing effect to hero section
             initTypingEffect();
         });
-
-        // Initialize Bootstrap scrollspy
         function initScrollSpy() {
             const scrollSpyElements = document.querySelectorAll('[data-bs-spy="scroll"]');
             scrollSpyElements.forEach(element => {
                 bootstrap.ScrollSpy.getOrCreateInstance(element);
             });
         }
-
-        // Smooth scrolling for navigation links
         function initSmoothScroll() {
             const navLinks = document.querySelectorAll('.nav-link, .navbar-brand');
             
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
-                    // Only process links with hash
                     if (this.hash !== '') {
                         e.preventDefault();
                         
@@ -789,7 +747,6 @@
                         const targetElement = document.querySelector(hash);
                         
                         if (targetElement) {
-                            // Calculate position with offset for fixed navbar
                             const navbarHeight = document.querySelector('.navbar').offsetHeight;
                             const targetPosition = targetElement.offsetTop - navbarHeight;
                             
@@ -797,8 +754,6 @@
                                 top: targetPosition,
                                 behavior: 'smooth'
                             });
-                            
-                            // Update URL hash after scroll
                             setTimeout(() => {
                                 window.location.hash = hash;
                             }, 800);
@@ -807,8 +762,6 @@
                 });
             });
         }
-
-        // Navbar animation on scroll
         function initNavbarAnimation() {
             const navbar = document.querySelector('.navbar');
             
@@ -822,10 +775,7 @@
                 }
             });
         }
-
-        // Add animation to cards when they come into view
         function initCardAnimations() {
-            // Check if Intersection Observer is supported
             if ('IntersectionObserver' in window) {
                 const cards = document.querySelectorAll('.card');
                 
@@ -845,14 +795,10 @@
                 });
             }
         }
-
-        // Mobile menu toggle
         function initMobileMenuToggle() {
             const navbarToggler = document.querySelector('.navbar-toggler');
             const navbarCollapse = document.querySelector('.navbar-collapse');
             const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-            
-            // Close mobile menu when a nav link is clicked
             navLinks.forEach(link => {
                 link.addEventListener('click', function() {
                     if (navbarCollapse.classList.contains('show')) {
@@ -861,8 +807,6 @@
                 });
             });
         }
-
-        // Add typing effect to the hero section
         function initTypingEffect() {
             const heroTitle = document.querySelector('.hero-section h1');
             
@@ -881,8 +825,6 @@
                 }, 50);
             }
         }
-
-        // Make active link highlight
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('section[id]');
             
