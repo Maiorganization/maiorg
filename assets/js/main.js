@@ -1,4 +1,4 @@
-// Main JavaScript file for Mai Organization website
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize scrollspy
