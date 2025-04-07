@@ -1,0 +1,19 @@
+
+<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="zaiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Lettre Z rapprochée -->
+  <text x="10" y="70" font-family="Segoe UI, sans-serif" font-size="48" font-weight="bold" fill="url(#zaiGradient)">Z</text>
+
+  <!-- Triangle stylisé pour le A (base remontée) -->
+  <polygon points="60,68 75,40 90,68" fill="none" stroke="url(#zaiGradient)" stroke-width="4" />
+  <line x1="67" y1="56" x2="83" y2="56" stroke="url(#zaiGradient)" stroke-width="2" />
+
+  <!-- Lettre I -->
+  <text x="105" y="70" font-family="Segoe UI, sans-serif" font-size="48" font-weight="bold" fill="url(#zaiGradient)">I</text>
+</svg>
